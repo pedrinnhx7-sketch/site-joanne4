@@ -1,0 +1,744 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F2E9DF; /* bege claro */
+    color: #4B3225; /* marrom escuro */
+    line-height: 1.6;
+}
+
+/* BOTÕES */
+.btn-primary {
+    background: linear-gradient(135deg, #8E5D36, #4B3225); /* marrom médio → marrom escuro */
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background: #fff;
+    border: 2px solid #8E5D36;
+    border-radius: 50px;
+    color: #8E5D36;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #8E5D36;
+    color: white;
+}
+
+/* Header */
+header {
+    background: #E7DCCF; /* bege suave */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8E5D36;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4B3225;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #8E5D36;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #CBA070, #8E5D36, #4B3225);
+    color: white;
+    padding: 120px 20px 80px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.hero img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid #F2E9DF;
+}
+
+/* Seções */
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #8E5D36;
+}
+
+/* Portfólio */
+/* -------- CORREÇÃO DOS BOTÕES "VER DETALHES" -------- */
+
+.card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+    width: 360px;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-conteudo {
+    padding: 25px 20px 35px; /* espaço perfeito para o botão */
+    text-align: center;
+}
+
+.card-conteudo h3 {
+    margin: 15px 0 10px;
+    font-size: 20px;
+    color: #4b3a31;
+}
+
+/* Botão padrão para TODOS os cards */
+.btn-detalhes {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 25px;
+    background: #7a4a22;
+    color: #fff;
+    border-radius: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn-detalhes:hover {
+    transform: scale(1.05);
+}
+
+
+/* Serviços */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.service-item i {
+    font-size: 3rem;
+    color: #CBA070;
+    margin-bottom: 20px;
+}
+
+/* Depoimentos */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.testimonial-item {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.testimonial-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.stars {
+    color: #CBA070;
+    margin-bottom: 10px;
+}
+
+/* Sobre */
+.about {
+    background: #E7DCCF;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+}
+
+.sobre-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Contato */
+/* ----- CONTAINER PRINCIPAL DO CONTATO ----- */
+.contato-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 60px auto; /* Aumenta o espaço acima e abaixo */
+    background: #fff;
+    padding: 60px; /* Aumenta o espaço interno */
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.06);
+}
+
+/* Título */
+.contato-container h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 50px; /* Descola do formulário */
+    color: #7a4a22;
+}
+/* BENEFÍCIOS */
+.beneficios-container {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f0e7dd;
+}
+
+.beneficios-container h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.beneficio-item {
+    background: #fdf8f3;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.beneficio-item i {
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: #8a5a42;
+}
+
+.beneficio-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+/* PROCESSO */
+.processo-container {
+    padding: 60px 20px;
+    background: #e7dbd0;
+    text-align: center;
+}
+
+.processo-container h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.processo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.processo-item {
+    background: #fdf8f3;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.processo-item span {
+    font-size: 28px;
+    font-weight: bold;
+    background: #8a5a42;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+}
+
+.processo-btn {
+    margin-top: 30px;
+    display: inline-block;
+}
+
+
+/* Inputs */
+.contato-form input,
+.contato-form textarea {
+    width: 100%;
+    border: 2px solid #b57842;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 16px;
+    margin-bottom: 25px; /* Distância entre os campos */
+    outline: none;
+}
+
+.contato-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Botão enviar */
+.btn-enviar {
+    display: block;
+    margin: 25px auto 0;
+    padding: 12px 35px;
+    background: #7a4a22;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+.btn-enviar:hover {
+    transform: scale(1.05);
+}
+
+
+/* Rodapé */
+footer {
+    background: #4B3225;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsivo */
+@media(max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .header-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin-left: 15px;
+    }
+}
+
+/* GRID DO PORTFÓLIO */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Catálogo de Valores */
+.catalogo-container {
+    background: #fff;
+    padding: 80px 20px;
+    border-radius: 20px;
+    margin-top: 60px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.catalogo-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #8E5D36;
+    margin-bottom: 40px;
+}
+
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.catalogo-item {
+    background: #E7DCCF;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.catalogo-item:hover {
+    transform: scale(1.05);
+}
+
+.catalogo-item h3 {
+    font-size: 22px;
+    color: #4B3225;
+    margin-bottom: 10px;
+}
+
+.catalogo-item p {
+    color: #4B3225;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.preco {
+    font-size: 22px;
+    font-weight: bold;
+    color: #541402;
+    background: #fff;
+    padding: 8px 18px;
+    border-radius: 22px;
+    border: 2px solid #7a4a22;
+    display: inline-block;
+}
+
+a {
+  color: inherit;        /* herda a cor do texto do elemento pai */
+  text-decoration: none; /* remove o sublinhado */
+}
+
+a:hover {
+  opacity: 0.8;          /* opcional – só pra dar um efeito no hover */
+}
+
+/* FUNDO ESCURO */
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    backdrop-filter: blur(2px);
+}
+
+/* CAIXA DO POPUP */
+#popup-box {
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    animation: popupShow 0.4s ease;
+}
+
+/* LOGO */
+.popup-logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* ANIMAÇÃO ENTRADA */
+@keyframes popupShow {
+    from { opacity: 0; transform: scale(0.7); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/* BOTÃO FECHAR */
+#popup-close {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border: none;
+    background: #8a5a42;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+#popup-close:hover {
+    background: #6c4635;
+}
+/* ============================= */
+/* ===== RESPONSIVIDADE ======== */
+/* ============================= */
+
+/* TELAS ATÉ 1024px – tablets */
+@media (max-width: 1024px) {
+
+    .header-container {
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* TELAS ATÉ 768px – celulares grandes */
+@media (max-width: 768px) {
+
+    /* Header */
+    header {
+        padding: 5px 0;
+    }
+
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 150px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Portfólio */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    /* Catálogo */
+    .catalogo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Sobre */
+    .sobre-img {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* Benefícios / Processo */
+    .beneficios-grid,
+    .processo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficio-item,
+    .processo-item {
+        padding: 20px;
+    }
+}
+
+
+/* TELAS ATÉ 480px – celulares pequenos */
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .hero {
+        padding: 140px 10px 50px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .btn-primary, 
+    .btn-secondary {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+
+    .card img {
+        height: 180px;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+    }
+
+    .catalogo-item {
+        padding: 20px;
+    }
+
+    .preco {
+        font-size: 18px;
+    }
+
+    .processo-item span {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+
+    #popup-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #popup-close {
+        width: 100%;
+    }
+}
